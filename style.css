@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: rgb(53, 1, 53);
+}
+
+.main div{
+    position: absolute;
+    transform: rotate(45deg);
+    
+    background: rgb(151, 45, 146);
+    border-radius: 50%;
+    animation: move 0.5s linear forwards;
+}
+.main div::before{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: '';
+    height: inherit;
+    width: inherit;
+    background: inherit;
+    
+}
+.main div::after{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    content: '';
+    height: inherit;
+    width: inherit;
+    background: inherit;
+    border-radius: 50%;
+}
+@keyframes move{
+    0%{
+        transform: translateY(0%) rotate(45deg);
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.7;
+    }
+    70%{
+        opacity: 0.5;
+    }
+    80%{
+        opacity: 0.3;
+    }
+
+    90%{
+        opacity: 0.1;
+    }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-400%) rotate(45deg);
+        opacity: 0;
+    }
+}
